@@ -32,10 +32,10 @@ class PreviewActivity : AppCompatActivity() {
                     bitmap?.let {
                         val croppedBmp: Bitmap = Bitmap.createBitmap(
                             bitmap,
-                            0,
-                           0,
-                            width,
-                            height
+                            (bitmap.width/3.0).roundToInt(),
+                            (bitmap.height/2.5).roundToInt(),
+                            130,
+                            130
                         )
                         ivPreview?.setImageBitmap(croppedBmp)
                     }
